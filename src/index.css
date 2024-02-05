@@ -1,0 +1,155 @@
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --base-font-size: 1rem;
+
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+
+        --secondary: 0% 0% 0%;
+        --secondary-foreground: 0% 0% 100%;
+
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --ring: 240 5% 64.9%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 85.7% 97.3%;
+
+        --ring: 240 3.7% 15.9%;
+    }
+}
+
+@layer base {
+    html {
+        @apply antialiased;
+    }
+    html,
+    body {
+        @apply h-screen font-sans-pro;
+    }
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+@layer utilities {
+    .transform-label {
+        @apply -translate-y-8 text-[14px] px-1;
+    }
+}
+
+.header-lg {
+    @apply text-[24px] font-bold leading-[24px];
+}
+
+.header-md {
+    @apply text-[20px] font-bold leading-[24px];
+}
+
+.header-sm {
+    @apply text-[18px] font-bold leading-[21px];
+}
+
+.header-xs {
+    @apply text-[16px] font-bold leading-[20px];
+}
+
+.header-xxs {
+    @apply text-[15px] font-bold leading-[20px];
+}
+
+.carousel .slide {
+    @apply pr-4;
+}
+
+.border-input {
+    @apply border-[#D6D6D6];
+}
+
+/* Targeting WebKit browsers */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: black !important;
+}
+
+/* For the transition of the color */
+/* input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+} */
+
+.input-date:in-range::-webkit-datetime-edit-year-field,
+.input-date:in-range::-webkit-datetime-edit-month-field,
+.input-date:in-range::-webkit-datetime-edit-day-field,
+.input-date:in-range::-webkit-datetime-edit-text {
+    @apply invisible;
+}
+.input-date::-webkit-calendar-picker-indicator {
+    @apply invisible;
+}
+
+input:-webkit-autofill ~ .floating-label {
+    @apply transform-label;
+}
+
+a[href^="https://maps.google.com/maps"],
+.gm-style-cc {
+    display: none !important;
+}
