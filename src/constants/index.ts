@@ -58,6 +58,7 @@ export const docs = {
         keeping: '../../public/keeping-htm.pdf',
     } as certs,
 }
+
 export const certificatesArray = Object.keys(docs.certificates).map(
     (key) => docs.certificates[key as keyof certs]
 )
